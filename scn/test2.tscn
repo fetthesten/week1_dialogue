@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://obj/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://img/tree_pattern2.png" type="Texture" id=2]
+
+[node name="Node" type="Node"]
+
+[node name="ColorRect" type="ColorRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1059.0
+margin_bottom = 618.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0.411765, 0.14902, 1 )
+
+[node name="YSort" type="YSort" parent="." index="1"]
+
+sort_enabled = true
+_sections_unfolded = [ "Sort" ]
+
+[node name="Player" parent="YSort" index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 543, 293 )
+MOVEMENT_SPEED = 6000
+
+[node name="Sprite" type="Sprite" parent="YSort" index="1"]
+
+position = Vector2( 213, 199 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="YSort" index="2"]
+
+position = Vector2( 324, 367 )
+texture = ExtResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="YSort" index="3"]
+
+position = Vector2( 786, 198 )
+texture = ExtResource( 2 )
+
+
